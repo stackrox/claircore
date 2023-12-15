@@ -89,6 +89,7 @@ func TestParse(t *testing.T) {
 	count := make(map[string]int)
 	for _, vuln := range vs {
 		count[vuln.Repo.Name]++
+		t.Logf("Vuln %s, Severity %s", vuln.ID, vuln.Severity)
 	}
 
 	const (
